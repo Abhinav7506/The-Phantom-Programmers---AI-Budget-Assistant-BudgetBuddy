@@ -1,0 +1,11 @@
+Frontend :
+HTML, CSS
+
+Database :
+flask_sqlalchemy
+
+Backend :
+Flask: Blueprint, request, jsonify, render-template
+
+Program to run in terminal for backend and database :
+pip install Flask Flask-SQLAlchemy Flask-Login Flask-Migrate Flask-CORS sqlite3 datetime

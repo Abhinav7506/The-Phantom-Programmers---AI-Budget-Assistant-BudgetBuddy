@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BudgetBuddy - Advanced Financial Tracker</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 id="header-title">BudgetBuddy</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#tracker">Budget Tracker</a>
+      <a href="#learning">Learning Center</a>
+      <a href="#investment">Investment Tools</a>
+      <a href="#insights">Insights</a>
+    </nav>
+    <div class="user-controls">
+      <button id="darkModeToggle"><img src="/static/dark-mode.svg"></button>
+    </div>
+  </header>
+
+  <!-- Dashboard Section -->
+  <main class="main-content">
+    <!-- Income and Expense Tracking -->
+    <section id="tracker" class="grid-section">
+      <div class="card">
+        <h2>Income</h2>
+        <p>Monthly Income:</p>
+        <input type="number" placeholder="Enter income" id="monthlyIncomeInput">
+        <button id="saveIncomeBtn" type="submit">Save</button>
+        <p>Available Balance:</p>
+        <span id="availableBalance">{{ available_balance }}</span>
+      </div>
+
+      <div class="card">
+        <h2>Expense</h2>
+        <form id="expenseForm">
+          <input type="number" id="expenseAmount" placeholder="Amount (e.g., $50)">
+          <select id="expenseCategory">
+            <option value="">Select Category</option>
+            <option value="food">Food</option>
+            <option value="rent">Rent</option>
+            <option value="transport">Transport</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="Savings">Savings</option>
+            <option value="Investment">Investment</option>
+
+          </select>
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Savings</h2>
+        <canvas id="savingsChart" width="200" height="200"></canvas>
+        <!--        <p>Level 3: Smart Saver</p>-->
+      </div>
+    </section>
+
+    <!-- Charts and Financial Goals -->
+    <section id="charts" class="grid-section">
+      <div class="card">
+        <h2>Income and Expense</h2>
+        <canvas id="incomeExpenseChart" width="400" height="300"></canvas>
+      </div>
+    </section>
+    <div class="card card 2">
+      <h2>Notes</h2>
+      <div class="container">
+        <div class="input-area">
+          <input type="text" id="task-input" placeholder="Add a Note...">
+          <button id="add-task-btn">Add</button>
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+      </div>
+
+      <script src="/static/script.js"></script>
+  </main>
+
+  <!-- Footer -->
+  <!--  <footer class="footer">-->
+  <!--    <p>&copy; 2025 BudgetBuddy. All rights reserved.</p>-->
+  <!--  </footer> -->
+
+  <script src="/static/script2.js"></script>
+  </div>
+  </section>
+
+  <!-- Learning Center and Recommendations -->
+  <section id="learning" class="grid-section">
+    <div class="card">
+      <div class="container">
+        <div class="learning-center">
+          <h2>Learning Center</h2>
+          <p>Explore topics on budgeting, savings, and investments:</p>
+          <div class="topics">
+            <div class="topic"><a href="https://www.facebook.com">
+                <h3>Basics of Budgeting</h3>
+                <p>Learn the fundamentals of creating and managing a budget.</p>
+              </a></div>
+            <div class="topic"> <a href="https://www.facebook.com">
+                <h3>How to Save More</h3>
+                <p>Discover strategies to increase your savings effectively.</p>
+              </a></div>
+            <div class="topic"> <a href="https://www.facebook.com">
+                <h3>Introduction to Investments</h3>
+                <p>Understand the basics of investing and how to get started.</p>
+              </a></div>
+            <div class="topic"> <a href="https://www.facebook.com">
+                <h3>Emergency Fund Planning</h3>
+                <p>Plan and build an emergency fund for financial security.</p>
+              </a></div>
+            <div class="topic"> <a href="https://www.facebook.com">
+                <h3>Debt Management Strategies</h3>
+                <p>Explore effective ways to manage and reduce debt.</p>
+              </a></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container1">
+        <div class="card1">
+          <h2>Recommendations</h2>
+          <div class="recommendations1" id="recommendationSection">
+            <!-- Recommendations will be inserted here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/recommendation.js"></script>
+
+  </section>
+
+  <!-- Advanced Features Section -->
+  <section id="advanced-features">
+    <div class="ad_container">
+      <h2 class="section-title">Advanced Features</h2>
+      <div class="features-grid">
+        <!-- Goal Tracking -->
+        <div class="feature-box">
+          <h3 class="feature-title">Goal Tracking</h3>
+          <p class="feature-description">Set and monitor goals for savings, investments, and debt repayment.</p>
+        </div>
+
+        <!-- Subscription Tracker -->
+        <div class="feature-box">
+          <h3 class="feature-title">Subscription Tracker</h3>
+          <p class="feature-description">Track all your monthly subscriptions and cancel unused ones.</p>
+        </div>
+
+        <!-- Spending Alerts -->
+        <div class="feature-box">
+          <h3 class="feature-title">Spending Alerts</h3>
+          <p class="feature-description">Receive alerts when you exceed your budget limits.</p>
+        </div>
+
+        <!-- Investment Simulator -->
+        <div class="feature-box">
+          <h3 class="feature-title">Investment Simulator</h3>
+          <p class="feature-description">Simulate investment scenarios to estimate returns and risks.</p>
+        </div>
+
+        <!-- Tax Estimator -->
+        <div class="feature-box">
+          <h3 class="feature-title">Tax Estimator</h3>
+          <p class="feature-description">Estimate annual taxes based on your income and deductions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  </main>
+
+</body>
+
+</html>
