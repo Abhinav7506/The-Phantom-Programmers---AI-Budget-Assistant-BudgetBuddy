@@ -35,3 +35,8 @@ Usage
 6. Engage with Financial Learning to improve money management skills.
 
 **Run the app.py file with all the required modules installed to run the program.**
+
+
+## IMPORTANT!!
+
+** Create an empty folder named "instance" within root directory to hold database**
